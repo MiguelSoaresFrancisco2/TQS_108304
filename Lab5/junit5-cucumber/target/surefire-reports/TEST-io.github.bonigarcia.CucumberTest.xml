@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="io.github.bonigarcia.CucumberTest" time="0.28" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="io.github.bonigarcia.CucumberTest" time="0.31" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PT"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/surefire/surefirebooter-20250313104052662_3.jar /home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/surefire 2025-03-13T10-40-52_589-jvmRun1 surefire-20250313104052662_1tmp surefire_0-20250313104052662_2tmp"/>
+    <property name="sun.java.command" value="/home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/surefire/surefirebooter-20250318101559274_3.jar /home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/surefire 2025-03-18T10-15-58_705-jvmRun1 surefire-20250318101559274_1tmp surefire_0-20250318101559274_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/test-classes:/home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/classes:/home/miguel/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/miguel/.m2/repository/ch/qos/logback/logback-classic/1.5.17/logback-classic-1.5.17.jar:/home/miguel/.m2/repository/ch/qos/logback/logback-core/1.5.17/logback-core-1.5.17.jar:/home/miguel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.0/junit-jupiter-api-5.12.0.jar:/home/miguel/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-commons/1.12.0/junit-platform-commons-1.12.0.jar:/home/miguel/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/miguel/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.0/junit-jupiter-5.12.0.jar:/home/miguel/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.0/junit-jupiter-params-5.12.0.jar:/home/miguel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.0/junit-jupiter-engine-5.12.0.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-suite/1.12.0/junit-platform-suite-1.12.0.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-suite-api/1.12.0/junit-platform-suite-api-1.12.0.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.12.0/junit-platform-suite-engine-1.12.0.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.12.0/junit-platform-suite-commons-1.12.0.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-java/7.21.1/cucumber-java-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-core/7.21.1/cucumber-core-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-gherkin/7.21.1/cucumber-gherkin-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.21.1/cucumber-gherkin-messages-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/gherkin/31.0.0/gherkin-31.0.0.jar:/home/miguel/.m2/repository/io/cucumber/messages/27.2.0/messages-27.2.0.jar:/home/miguel/.m2/repository/io/cucumber/testng-xml-formatter/0.3.1/testng-xml-formatter-0.3.1.jar:/home/miguel/.m2/repository/io/cucumber/query/13.2.0/query-13.2.0.jar:/home/miguel/.m2/repository/io/cucumber/tag-expressions/6.1.2/tag-expressions-6.1.2.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-expressions/18.0.1/cucumber-expressions-18.0.1.jar:/home/miguel/.m2/repository/io/cucumber/datatable/7.21.1/datatable-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-plugin/7.21.1/cucumber-plugin-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/docstring/7.21.1/docstring-7.21.1.jar:/home/miguel/.m2/repository/io/cucumber/html-formatter/21.9.0/html-formatter-21.9.0.jar:/home/miguel/.m2/repository/io/cucumber/junit-xml-formatter/0.7.1/junit-xml-formatter-0.7.1.jar:/home/miguel/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/home/miguel/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.21.1/cucumber-junit-platform-engine-7.21.1.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-engine/1.12.0/junit-platform-engine-1.12.0.jar:/home/miguel/.m2/repository/org/junit/platform/junit-platform-launcher/1.12.0/junit-platform-launcher-1.12.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/surefire/surefirebooter-20250313104052662_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/miguel/Documentos/GitHub/TQS_108304/Lab5/junit5-cucumber/target/surefire/surefirebooter-20250318101559274_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7-Ubuntu-122.04.1"/>
     <property name="user.name" value="miguel"/>
@@ -53,40 +53,40 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Addition" classname="Basic Arithmetic" time="0.16">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.add(44) -- Adding 4.0 and 5.0
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 9.0 (expected 9.0)
+  <testcase name="Addition" classname="Basic Arithmetic" time="0.2">
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.add(44) -- Adding 4.0 and 5.0
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 9.0 (expected 9.0)
 ]]></system-out>
   </testcase>
-  <testcase name="Substraction" classname="Basic Arithmetic" time="0.006">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.substract(54) -- Substracting 7 and 2
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 5.0 (expected 5.0)
+  <testcase name="Substraction" classname="Basic Arithmetic" time="0.005">
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.substract(54) -- Substracting 7 and 2
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 5.0 (expected 5.0)
 ]]></system-out>
   </testcase>
-  <testcase name="Multiplication" classname="Basic Arithmetic" time="0.003">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.multiply(62) -- Multiplying 3 by 4
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 12.0 (expected 12.0)
+  <testcase name="Multiplication" classname="Basic Arithmetic" time="0.005">
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.multiply(62) -- Multiplying 3 by 4
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 12.0 (expected 12.0)
 ]]></system-out>
   </testcase>
-  <testcase name="Division" classname="Basic Arithmetic" time="0.003">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.divide(70) -- Dividing 12 by 3
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 4.0 (expected 4.0)
+  <testcase name="Division" classname="Basic Arithmetic" time="0.004">
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.divide(70) -- Dividing 12 by 3
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 4.0 (expected 4.0)
 ]]></system-out>
   </testcase>
   <testcase name="Invalid Number" classname="Basic Arithmetic" time="0.008">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.divide(70) -- Dividing 4 by 0
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.divide(77) -- Caught exception: Cannot divide by zero
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.i_get_an_error_message(93) -- Caught expected exception: Stack is empty, no value to return
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.divide(70) -- Dividing 4 by 0
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.divide(77) -- Caught exception: Cannot divide by zero
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.i_get_an_error_message(93) -- Caught expected exception: Stack is empty, no value to return
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Single digits" time="0.006">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.add(44) -- Adding 1.0 and 2.0
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 3.0 (expected 3.0)
+  <testcase name="Example #1.1" classname="Single digits" time="0.01">
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.add(44) -- Adding 1.0 and 2.0
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 3.0 (expected 3.0)
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Single digits" time="0.004">
-    <system-out><![CDATA[2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.add(44) -- Adding 3.0 and 7.0
-2025-03-13 10:40:53 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 10.0 (expected 10.0)
+  <testcase name="Example #1.2" classname="Single digits" time="0.003">
+    <system-out><![CDATA[2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.add(44) -- Adding 3.0 and 7.0
+2025-03-18 10:16:00 [main] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(84) -- Result: 10.0 (expected 10.0)
 ]]></system-out>
   </testcase>
 </testsuite>
