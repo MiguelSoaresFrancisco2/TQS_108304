@@ -23,7 +23,7 @@ import com.example.car_service.repository.CarRepository;
 public class CarControllerIntegrationTest {
 
     @Container
-    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:14.5")
+    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:latest")
             .withDatabaseName("testdb")
             .withUsername("user")
             .withPassword("pass");
