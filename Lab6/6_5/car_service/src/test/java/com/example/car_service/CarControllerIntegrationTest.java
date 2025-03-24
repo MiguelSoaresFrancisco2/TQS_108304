@@ -18,7 +18,6 @@ import static org.hamcrest.Matchers.*;
 import com.example.car_service.repository.Car;
 import com.example.car_service.repository.CarRepository;
 
-
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Testcontainers
 public class CarControllerIntegrationTest {
@@ -41,8 +40,8 @@ public class CarControllerIntegrationTest {
         registry.add("spring.datasource.username", postgres::getUsername);
         registry.add("spring.datasource.password", postgres::getPassword);
         registry.add("spring.datasource.driver-class-name", () -> "org.postgresql.Driver");
-        registry.add("spring.jpa.hibernate.ddl-auto", () -> "create-drop");
-        registry.add("spring.flyway.enabled", () -> "false");
+        registry.add("spring.jpa.hibernate.ddl-auto", () -> "none"); // ❗ Flyway cuida do schema
+        registry.add("spring.flyway.enabled", () -> "true");        // ✅ Flyway ativo
     }
 
     @BeforeEach
@@ -53,7 +52,6 @@ public class CarControllerIntegrationTest {
         carRepository.deleteAll();
         carRepository.save(new Car("BMW", "Serie 5", "Sedan", "Gasoline"));
         carRepository.save(new Car("Tesla", "Model S", "Luxury", "Electric"));
-
     }
 
     @Test
