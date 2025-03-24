@@ -40,8 +40,8 @@ public class CarControllerIntegrationTest {
         registry.add("spring.datasource.username", postgres::getUsername);
         registry.add("spring.datasource.password", postgres::getPassword);
         registry.add("spring.datasource.driver-class-name", () -> "org.postgresql.Driver");
-        registry.add("spring.jpa.hibernate.ddl-auto", () -> "none"); // ❗ Flyway cuida do schema
-        registry.add("spring.flyway.enabled", () -> "true");        // ✅ Flyway ativo
+        registry.add("spring.jpa.hibernate.ddl-auto", () -> "none"); 
+        registry.add("spring.flyway.enabled", () -> "true");        
     }
 
     @BeforeEach
