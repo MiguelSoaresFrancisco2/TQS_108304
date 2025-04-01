@@ -59,9 +59,11 @@ alinea f)
 
 Exercicio 3
 
-![alt text](8.png)
-What metrics are contributing the most to the frontend perceived performance? What do
-they mean? 
+alinea c)
+    ![alt text](8.png)
+
+    What metrics are contributing the most to the frontend perceived performance? What do
+    they mean? 
 
     First Contentful Paint (FCP): 2.8s --> Tempo até o primeiro conteúdo visível ser renderizado.
     
@@ -73,10 +75,34 @@ they mean?
     Total Blocking Time: 80ms --> Tempo total em que o main thread esteve bloqueado e impediu interações.
 
    
-How would you make the site more accessible?
-Accessibility:
-" Background and foreground colors do not have a sufficient contrast ratio. "
-Melhorar o contraste entre texto e fundo para ser legivel.
+    How would you make the site more accessible?
+    Accessibility:
+
+    " Background and foreground colors do not have a sufficient contrast ratio. "
+    Melhorar o contraste entre texto e fundo para ser legivel.
 
 
 
+alinea d)
+
+    Usando uma pagina anónima obtivemos melhores performances :
+    ![alt text](9.png)
+    A performance aumentou para 100
+
+    O First Contentful Paint baixou para 0.6s 
+
+    O Largest Contentful Paint baixou 0.7s 
+
+    Isto aconteceu pois usando uma pagina anónima conseguimos eliminar influencias de caches, sessoes etc
+
+alinea f)
+    Costumamos usar este testes para garantir que o site é rapido, seguro, e acessível
+
+alinea g)
+
+    No site www.ua.pt os principais problemas identificados foram:
+     Desempeho: pontuação de 55
+     Acessibilidade de 82
+     Praticas recomendadas 74 
+     SEO de 85
+     Estes problemas afetam a experiência do utilizador e podem prejudicar o posicionamento do site nos motores de busca. Corrigir estes problemas num site que já está em produção há muito tempo pode ser desafiante, principalmente se envolver reestruturações profundas no frontend. No entanto, muitos destes erros poderiam ter sido evitados se houvesse uma prática contínua de auditorias de qualidade durante o desenvolvimento, com integração de ferramentas como o Lighthouse desde o iníciodo desenvolvimento da aplicação.
