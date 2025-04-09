@@ -71,4 +71,25 @@ public class ReservationService {
     public Reservation saveReservation(Reservation reservation) {
         return reservationRepository.save(reservation);
     }
+
+    // Verifica se a refeição está reservada
+    public boolean isFacilityFull(Meal meal) {
+        return meal.isReserved();
+    }
+
+    // Verifica se o serviço está disponível (exemplo simples de um dia da semana)
+    public boolean isServiceAvailable(String dayOfWeek) {
+        // Simulando que o serviço está disponível todos os dias
+        return !dayOfWeek.isEmpty();
+    }
+
+    // Verifica se o ticket já foi utilizado
+    public boolean isTicketUsed(Reservation reservation) {
+        return reservation.isUsed();
+    }
+
+    // Método fictício para buscar uma refeição no cache (apenas exemplo)
+    public Meal getMealFromCache(String mealName) {
+        return mealService.getMealByName(mealName);  // Aqui você pode integrar com cache real
+    }
 }

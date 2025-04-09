@@ -4,6 +4,7 @@ import com.example.mealbooking.model.Meal;
 import com.example.mealbooking.repository.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.Optional;
 
 import java.util.List;
 
@@ -12,6 +13,11 @@ public class MealService {
 
     @Autowired
     private MealRepository mealRepository;
+
+    public Meal getMealByName(String name) {
+        Optional<Meal> meal = mealRepository.findByName(name);
+        return meal.orElse(null);  // Retorna null se não encontrar a refeição
+    }
 
     // Método para obter todas as refeições
     public List<Meal> getAllMeals() {
