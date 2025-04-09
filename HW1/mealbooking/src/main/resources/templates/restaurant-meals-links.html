@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Refeições de Restaurante</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 th:text="'Refeições do Restaurante ' + ${restaurant.name}">Refeições do Restaurante</h2>
+        <h4>Endereço: <span th:text="${restaurant.address}">Endereço do Restaurante</span></h4>
+
+        <h3>Refeições Disponíveis:</h3>
+
+        <!-- Links para cada dia da semana -->
+        <div>
+            <a th:href="@{/restaurant/{id}/meals/day/Segunda-feira(id=${restaurant.id})}" class="btn btn-primary">Segunda-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Terça-feira(id=${restaurant.id})}" class="btn btn-primary">Terça-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Quarta-feira(id=${restaurant.id})}" class="btn btn-primary">Quarta-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Quinta-feira(id=${restaurant.id})}" class="btn btn-primary">Quinta-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Sexta-feira(id=${restaurant.id})}" class="btn btn-primary">Sexta-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Sábado(id=${restaurant.id})}" class="btn btn-primary">Sábado</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Domingo(id=${restaurant.id})}" class="btn btn-primary">Domingo</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmação de Reserva</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Reserva Confirmada</h2>
+        <p>Reserva realizada com sucesso!</p>
+        <p><strong>Código da Reserva:</strong> <span th:text="${reservation.reservationCode}">Código da Reserva</span></p>
+        <p><strong>Refeição:</strong> <span th:text="${reservation.meal}">Nome da Refeição</span></p>
+        <p><strong>Data:</strong> <span th:text="${reservation.date}">Data da Reserva</span></p>
+        <a href="/" class="btn btn-primary">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

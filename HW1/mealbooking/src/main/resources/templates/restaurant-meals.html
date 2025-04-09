@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Refeições de Restaurante</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 th:text="'Refeições do Restaurante ' + ${restaurant.name}">Refeições do Restaurante</h2>
+        <h4>Endereço: <span th:text="${restaurant.address}">Endereço do Restaurante</span></h4>
+
+        <h3>Refeições Disponíveis para <span th:text="${dayOfWeek}">Dia da Semana</span>:</h3>
+
+        <!-- Exibir mensagem de erro se a refeição já estiver reservada -->
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">
+                <p th:text="${errorMessage}">A refeição já está reservada para esse dia!</p>
+            </div>
+        </div>
+
+        <!-- Verificando se existem refeições para o dia -->
+        <div th:if="${#lists.isEmpty(meals)}">
+            <p>Não há refeições disponíveis para esse dia.</p>
+        </div>
+        <div th:unless="${#lists.isEmpty(meals)}">
+            <div class="list-group mt-3">
+                <div class="list-group-item" th:each="meal : ${meals}">
+                    <h5 th:text="${meal.name}">Nome da Refeição</h5>
+                    <p th:text="${meal.description}">Descrição da refeição</p>
+                    <p th:text="'Preço: ' + ${meal.price}">Preço</p>
+
+                    <!-- Botão de reserva ou cancelamento -->
+                    <form th:action="@{/reservations}" method="post">
+                        <input type="hidden" name="mealId" th:value="${meal.id}">
+                        <input type="hidden" name="mealName" th:value="${meal.name}">
+                        <input type="hidden" name="reservationCode" th:value="${T(java.util.UUID).randomUUID()}"> <!-- Gerar um código de reserva único -->
+                        <input type="hidden" name="dayOfWeek" th:value="${dayOfWeek}"> <!-- Nome do dia da semana -->
+                        <input type="hidden" name="restaurantId" th:value="${restaurant.id}"> <!-- Passar o ID do restaurante -->
+                    
+                        <!-- Botão de Reserva -->
+                        <button type="submit" class="btn btn-success" th:disabled="${meal.isReserved}">Reservar</button>
+                    </form>
+                    
+                    <!-- Botão de Cancelar Reserva -->
+                    <form th:action="@{/reservations/cancelReservation}" method="post" style="display:inline-block;" th:if="${meal.isReserved}">
+                        <input type="hidden" name="reservationId" th:value="${meal.id}"> <!-- Passar meal.id ou reservation.id -->
+                        <input type="hidden" name="dayOfWeek" th:value="${dayOfWeek}">
+                        <input type="hidden" name="restaurantId" th:value="${restaurant.id}">
+                        <button type="submit" class="btn btn-danger">Cancelar Reserva</button>
+                    </form>
+                    
+                    
+                    
+
+                    <!-- Mostrar quando já estiver reservado -->
+                    <div th:if="${meal.isReserved}" class="text-danger">Já reservado!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links para os outros dias -->
+        <div>
+            <a th:href="@{/restaurant/{id}/meals/day/Segunda-feira(id=${restaurant.id})}" class="btn btn-primary">Segunda-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Terça-feira(id=${restaurant.id})}" class="btn btn-primary">Terça-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Quarta-feira(id=${restaurant.id})}" class="btn btn-primary">Quarta-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Quinta-feira(id=${restaurant.id})}" class="btn btn-primary">Quinta-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Sexta-feira(id=${restaurant.id})}" class="btn btn-primary">Sexta-feira</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Sábado(id=${restaurant.id})}" class="btn btn-primary">Sábado</a>
+            <a th:href="@{/restaurant/{id}/meals/day/Domingo(id=${restaurant.id})}" class="btn btn-primary">Domingo</a>
+        </div>
+
+        <a href="/" class="btn btn-primary">Voltar para Home</a>
+    </div>
+</body>
+</html>

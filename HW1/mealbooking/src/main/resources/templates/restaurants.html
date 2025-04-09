@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            width: 18rem;
+            margin: 10px;
+        }
+        .card-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .card-text {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Restaurantes</h2>
+        <div class="row">
+            <!-- Para cada restaurante -->
+            <div class="col-md-4" th:each="restaurant : ${restaurants}">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Restaurante"> <!-- Imagem genérica -->
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${restaurant.name}">Nome do Restaurante</h5>
+                        <p class="card-text" th:text="${restaurant.description}">Descrição do restaurante</p>
+                        <p class="card-text" th:text="${restaurant.address}">Endereço do restaurante</p>
+                        <a th:href="@{/restaurant/{id}(id=${restaurant.id})}" class="btn btn-primary">Ver Refeições</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

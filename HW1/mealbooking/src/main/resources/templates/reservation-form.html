@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Reserva</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Criar Reserva</h2>
+
+        <form action="/reservations" method="POST">
+            <div class="form-group">
+                <label for="reservationCode">Código da Reserva</label>
+                <input type="text" class="form-control" id="reservationCode" name="reservationCode" required>
+            </div>
+            <div class="form-group">
+                <label for="mealId">ID da Refeição</label>
+                <input type="number" class="form-control" id="mealId" name="mealId" required>
+            </div>
+            <div class="form-group">
+                <label for="mealName">Nome da Refeição</label>
+                <input type="text" class="form-control" id="mealName" name="mealName" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Data da Refeição</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Criar Reserva</button>
+        </form>
+    </div>
+</body>
+</html>

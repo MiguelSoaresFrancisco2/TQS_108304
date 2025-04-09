@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Verificar Reserva</title>
+    <meta charset="UTF-8">
+    <title>Reservas - Staff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Check-in de Reserva</h1>
-    <form action="/checkin" method="post">
-        <label for="code">Código:</label>
-        <input type="text" name="code" id="code" required>
-        <button type="submit">Validar</button>
-    </form>
+    <div class="container mt-5">
+        <h2>Reservas - Staff</h2>
 
-    <div th:if="${result}">
-        <p th:text="${result}"></p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Refeição</th>
+                    <th>Dia da Semana</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="reservation : ${reservations}">
+                    <td th:text="${reservation.id}">ID</td>
+                    <td th:text="${reservation.mealName}">Nome da Refeição</td>
+                    <td th:text="${reservation.dayOfWeek}">Dia da Semana</td>
+                    <td>
+                        <span th:if="${reservation.isUsed}" class="badge badge-success">Concluída</span>
+                        <span th:unless="${reservation.isUsed}" class="badge badge-warning">Pendente</span>
+                    </td>
+                    <td>
+                        <!-- Botão para marcar como concluída -->
+                        <form th:action="@{/staff/markAsCompleted}" method="post">
+                            <input type="hidden" name="reservationId" th:value="${reservation.id}">
+                            <button type="submit" class="btn btn-success" th:disabled="${reservation.isUsed}">Marcar como Concluída</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/" class="btn btn-primary">Voltar para Home</a>
     </div>
 </body>
 </html>
