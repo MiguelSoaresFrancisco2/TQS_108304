@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Consultar Reserva</title>
+</head>
+<body>
+    <h1>Consultar Reserva</h1>
+    <form method="get" action="/reservation">
+        <label for="code">Código:</label>
+        <input type="text" name="code" id="code" required>
+        <button type="submit">Procurar</button>
+    </form>
+
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+
+    <div th:if="${reservation}">
+        <p>Refeição: <span th:text="${reservation.meal.name}"></span></p>
+        <p>Data: <span th:text="${reservation.meal.date}"></span></p>
+        <p>Estado: <span th:text="${reservation.used ? 'Usada' : 'Ativa'}"></span></p>
+    </div>
+</body>
+</html>

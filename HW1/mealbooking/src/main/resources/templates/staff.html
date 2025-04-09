@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Verificar Reserva</title>
+</head>
+<body>
+    <h1>Check-in de Reserva</h1>
+    <form action="/checkin" method="post">
+        <label for="code">Código:</label>
+        <input type="text" name="code" id="code" required>
+        <button type="submit">Validar</button>
+    </form>
+
+    <div th:if="${result}">
+        <p th:text="${result}"></p>
+    </div>
+</body>
+</html>
